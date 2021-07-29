@@ -2,6 +2,13 @@
 echo "Init uMod and Installing"
 set wrkdir="%cd%\Server-Files"
 md %wrkdir%\steamapps\common\rust_dedicated\temp_zip
+
+
+:zipjs
+    zipjs.bat unzip -source "umod.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated\temp_zip" -keep yes -force yes
+    call :finish
+GOTO zipjs
+
 :finish      
     move "Server-Files\steamapps\common\rust_dedicated\temp_zip\RustDedicated_Data\Managed\*dll**.*" "Server-Files\steamapps\common\rust_dedicated\RustDedicated_Data\Managed"
     echo "Deleted umod.zip"
@@ -14,8 +21,3 @@ md %wrkdir%\steamapps\common\rust_dedicated\temp_zip
     del "server-install.bat" /f /q
     start start.bat
     exit
-
-:zipjs
-    zipjs.bat unzip -source "umod.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated\temp_zip" -keep yes -force yes
-    GOTO finish
-GOTO zipjs
