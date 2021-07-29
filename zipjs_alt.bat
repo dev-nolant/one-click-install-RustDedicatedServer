@@ -6,12 +6,15 @@ IF "%1"=="s" GOTO Second
 IF "%1"=="t" GOTO Third
 SHIFT
 :First
+echo "Transfering Files to Unzipped Folder 1/2"
 call zipjs.bat unzip -source "steamcmd.zip" -destination %wrkdir% -keep yes -force yes
+echo "moving on"
 exit
 :Second
+echo "Installing Rust-Dedicated Server Files"
 start steamcmd.exe +login anonymous +app_update 258550 valdiate +quit
 exit
 :Third
-cd %wrkdir%
+echo "Init uMod and Installing"
 call zipjs.bat unzip -source "%wrkdir%\umod.zip" -destination %wrkdir%\steamapps\common\rust_dedicated -keep yes -force yes
 exit
