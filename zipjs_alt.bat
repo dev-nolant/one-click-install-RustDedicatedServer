@@ -12,9 +12,10 @@ echo "moving on"
 exit
 :Second
 echo "Installing Rust-Dedicated Server Files"
-start steamcmd.exe +login anonymous +app_update 258550 valdiate +quit
+start Server-Files\steamcmd.exe +login anonymous +app_update 258550 valdiate +quit
 exit
 :Third
 echo "Init uMod and Installing"
-zipjs.bat unzip -source "%cd%\steamcmd.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated" -keep yes -force yes
+zipjs.bat unzip -source "%cd%\steamcmd.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated\temp_zip" -keep yes -force yes
+move "%wrkdir%\steamapps\common\rust_dedicated\temp_zip\*.*" Destination-"%wrkdir%\steamapps\common\rust_dedicated"
 exit
