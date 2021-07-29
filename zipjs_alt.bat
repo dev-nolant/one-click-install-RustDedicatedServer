@@ -12,7 +12,7 @@ echo "moving on"
 exit
 :Second
 echo "Installing Rust-Dedicated Server Files"
-start Server-Files\steamcmd.exe +login anonymous +app_update 258550 valdiate +quit
+start Server-Files\steamcmd.exe +login anonymous +app_update 258550 valdiate 
 exit
 :Third
 echo "Init uMod and Installing"
