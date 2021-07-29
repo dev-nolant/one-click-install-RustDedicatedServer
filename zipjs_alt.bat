@@ -16,7 +16,7 @@ start Server-Files\steamcmd.exe +login anonymous +app_update 258550 valdiate +qu
 exit
 :Third
 echo "Init uMod and Installing"
+set wrkdir="%cd%\Server-Files"
 md %wrkdir%\steamapps\common\rust_dedicated\temp_zip
 zipjs.bat unzip -source "%wrkdir%\umod.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated\temp_zip" -keep yes -force yes
-move "Server-Files\steamapps\common\rust_dedicated\temp_zip\RustDedicated_Data\Managed\*dll**.*" "Server-Files\steamapps\common\rust_dedicated\RustDedicated_Data\Managed"
 exit
