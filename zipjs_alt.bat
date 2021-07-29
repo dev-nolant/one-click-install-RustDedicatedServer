@@ -7,7 +7,7 @@ IF "%1"=="t" GOTO Third
 SHIFT
 :First
 echo "Transfering Files to Unzipped Folder 1/2"
-call zipjs.bat unzip -source "steamcmd.zip" -destination %wrkdir%\ -keep yes -force yes
+call zipjs.bat unzip -source "%cd%\steamcmd.zip" -destination %wrkdir%\ -keep yes -force yes
 echo "moving on"
 exit
 :Second
