@@ -1,6 +1,6 @@
 @ECHO OFF
 set wrkdir="%cd%\Server-Files"
-cd %wrkdir%
+
 IF "%1"=="f" GOTO First
 IF "%1"=="s" GOTO Second
 IF "%1"=="t" GOTO Third
