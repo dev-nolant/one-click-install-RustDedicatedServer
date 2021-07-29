@@ -16,5 +16,5 @@ start steamcmd.exe +login anonymous +app_update 258550 valdiate +quit
 exit
 :Third
 echo "Init uMod and Installing"
-zipjs.bat unzip -source "%cd%\steamcmd.zip" -destination %wrkdir% -keep yes -force no
+zipjs.bat unzip -source "%cd%\steamcmd.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated" -keep yes -force no
 exit
