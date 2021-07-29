@@ -5,11 +5,11 @@ IF "%1"=="s" GOTO Second
 IF "%1"=="t" GOTO Third
 SHIFT
 :First
-zipjs.bat unzip -source "%cd%\steamcmd.zip" -destination %wrkdir% -force yes
+zipjs.bat unzip -source "%cd%\steamcmd.zip" -destination %wrkdir% -keep yes -force yes
 exit
 :Second
 steamcmd.exe +login anonymous +app_update 258550 valdiate +quit
 exit
 :Third
-zipjs.bat unzip -source "%wrkdir%\umod.zip" -destination %wrkdir%\steamapps\common\rust_dedicated -force yes
+zipjs.bat unzip -source "%wrkdir%\umod.zip" -destination %wrkdir%\steamapps\common\rust_dedicated -keep yes -force yes
 exit
