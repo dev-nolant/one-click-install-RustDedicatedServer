@@ -16,6 +16,6 @@ md %wrkdir%\steamapps\common\rust_dedicated\temp_zip
     exit
 
 :zipjs
-    zipjs.bat unzip -source "%wrkdir%\umod.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated\temp_zip" -keep yes -force yes
+    zipjs.bat unzip -source "umod.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated\temp_zip" -keep yes -force yes
     GOTO finish
 GOTO zipjs
