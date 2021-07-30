@@ -5,8 +5,7 @@ md %wrkdir%\steamapps\common\rust_dedicated\temp_zip
 
 :finish      
     move "Server-Files\steamapps\common\rust_dedicated\temp_zip\RustDedicated_Data\Managed\*dll**.*" "Server-Files\steamapps\common\rust_dedicated\RustDedicated_Data\Managed"
-    echo "Deleted umod.zip"
-    del "umod.zip" /f /q
+    
     bitsadmin /transfer "start_installer" "https://raw.githubusercontent.com/dev-nolant/one-click-install-RustDedicatedServer/main/start.bat" "%cd%\start.bat"
     cls
     echo "Finished - Starting Server"
@@ -21,4 +20,3 @@ md %wrkdir%\steamapps\common\rust_dedicated\temp_zip
     zipjs.bat unzip -source "%cd%\umod.zip" -destination "%wrkdir%\steamapps\common\rust_dedicated\temp_zip" -keep yes -force yes
     goto finish
 GOTO zipjs
-
