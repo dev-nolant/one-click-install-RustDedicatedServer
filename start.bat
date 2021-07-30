@@ -1,7 +1,8 @@
 @echo off
 del "step-two.bat"/f /q
 cls
-echo "Deleted umod.zip"
+echo "Deleted Temp files"
+echo "launching server, please wait."
 del "umod.zip" /f /q
 cd Server-Files\steamapps\common\rust_dedicated\
 :start
